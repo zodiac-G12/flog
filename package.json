@@ -2,19 +2,48 @@
   "name": "vite-template-solid",
   "version": "0.0.0",
   "description": "",
+  "engines": {
+    "pnpm": "7.5.0",
+    "node": "18.4.0"
+  },
   "scripts": {
     "start": "vite",
+    "prepare": "husky install",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vitest",
+    "testrun": "vitest run",
+    "format": "prettier-eslint --write 'src/**/*.js'"
   },
   "license": "MIT",
   "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier-eslint": "^15.0.1",
+    "prettier-eslint-cli": "^6.0.1",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
-    "vite-plugin-solid": "^2.2.6"
+    "vite-plugin-solid": "^2.2.6",
+    "vitest": "^0.18.0"
   },
   "dependencies": {
-    "solid-js": "^1.4.2"
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-plugin-solid": "^0.7.0",
+    "solid-app-router": "^0.4.1",
+    "solid-js": "^1.4.2",
+    "solid-styled-components": "^0.28.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less,sass,scss}": [
+      "stylelint --fix"
+    ]
   }
 }
