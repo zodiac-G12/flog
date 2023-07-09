@@ -5,9 +5,13 @@ export default defineConfig({
   plugins: [solidPlugin()],
   build: {
     target: "esnext",
-    polyfillDynamicImport: false,
   },
   test: {
     globals: true,
+  },
+  resolve: {
+    alias: {
+      "@/": `${__dirname}/src/`,
+    },
   },
 });
