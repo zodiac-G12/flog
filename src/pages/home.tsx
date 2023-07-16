@@ -1,9 +1,10 @@
+import { Accessor } from "solid-js";
 import type { Component } from "solid-js";
 import { css } from "solid-styled-components";
 import { i18n } from "@/i18next/init";
 import { Crown, ArticleListView } from "@/components";
 
-export const Home: Component = () => {
+const Home: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
   return (
     <div class={HomeContainer}>
       <Crown />
@@ -13,11 +14,13 @@ export const Home: Component = () => {
         <div class={Title}>{i18n.t("title")}</div>
         <div class={Divider}></div>
       </div>
-      <ArticleListView />
+      <ArticleListView isSP={isSP} />
       <div>footer</div>
     </div>
   );
 };
+
+export default Home;
 
 const Title = css({
   textAlign: "center",

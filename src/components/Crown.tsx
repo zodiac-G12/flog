@@ -8,7 +8,9 @@ export const Crown: Component = () => {
     <div class={CrownContainer}>
       <div class={IconWithText}>
         <Img width={"60px"} height={"60px"} src={"fblok.png"} />
-        <div class={ServiceName}>{i18n.t("serviceName")}</div>
+        <div class={ServiceNameContainer}>
+          <div class={ServiceName}>{i18n.t("serviceName")}</div>
+        </div>
       </div>
     </div>
   );
@@ -23,17 +25,19 @@ const IconWithText = css({
   textAlign: "center",
   display: "flex",
   justifyContent: "center",
-  marginTop: "2.5px",
+  alignItems: "center",
+});
+
+const ServiceNameContainer = css({
+  height: "65px",
+  display: "flex",
+  alignItems: "center",
 });
 
 const ServiceName = css({
-  marginTop: "-2.5px",
-  fontSize: "30px",
-  height: "65px",
+  marginTop: "25px",
+  fontSize: "40px",
   fontFamily: "Gotham Bold",
   fontWeight: "Bold",
-  display: "grid",
-  placeItems: "center",
   color: "#698403",
-  background: "white",
 });

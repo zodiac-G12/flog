@@ -1,32 +1,16 @@
+import { Accessor } from "solid-js";
 import type { Component } from "solid-js";
-import { createEffect, createSignal } from "solid-js";
-import { A } from "@solidjs/router";
 import { css } from "solid-styled-components";
 import { articles, Article } from "../articles";
 import { ArticleView } from "@/components";
 
-export const ArticleListView: Component = () => {
-  // history.pushState("", "", "/");
-  const [isSP, setIsSP] = createSignal(false);
-
-  const spMaxWidth = 450;
-
-  createEffect(() => {
-    const currentWidth = window.innerWidth;
-
-    const isSP = spMaxWidth > currentWidth ? true : false;
-
-    setIsSP(isSP);
-  }, []);
-
+export const ArticleListView: Component<{ isSP: Accessor<boolean> }> = ({
+  isSP,
+}) => {
   return (
     <div class={ArticleListContainer(isSP())}>
       {articles.map((article: Article) => {
-        return (
-          <A href={`/articles/${article.title}`}>
-            <ArticleView isSP={isSP} article={article} />
-          </A>
-        );
+        return <ArticleView isSP={isSP} article={article} />;
       })}
     </div>
   );
