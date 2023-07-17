@@ -1,31 +1,43 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import SolidMarkdown from "solid-markdown";
-import Highlight from "solid-highlight";
-import { css } from "solid-styled-components";
-import { Img } from "@/components";
+<template>
+    <div>
+        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
+    </div>
+</template>
 
-const markdown = `
-## # 経緯
+
+<script>
+
+const DefaultArticle = () => import('~/components/default-article.vue');
+// import marked from 'marked';
+// import katex from 'katex';
+import marked from 'marked-katex';
+
+export default{
+    data: function() {
+        return {
+            link: "content15",
+            prekiji:
+`
+## 経緯
 　去年からReactでずっと作っていたTODOアプリがあって、
 途中で飽きたので、そのまま似たような機能のものをSvelteで実装した。
 
 　課題観としては、trelloなどを想像して、使い勝手の悪いところ、
 もっとこうだったらいいのになという箇所に着目して、機能を実装したものである。
 
-## # TLDR
+## TLDR
 
 - [出来上がったアプリ](https://zodiac-g12.github.io/palladocs/)
 - [ソースコード](https://github.com/zodiac-G12/palladocs)
 
-## # 課題となった箇所一覧
+## 課題となった箇所一覧
 
 - プロパティ受け渡し
 - イベント伝搬
 - Modalの実装
 - DnDの実装
 
-## # プロパティ受け渡し
+## プロパティ受け渡し
 
 　例えば以下のように、「__answer__」というプロパティを受け渡し出来る。
 渡す側は__{}__でプロパティ名を囲って渡す。
@@ -50,9 +62,9 @@ Nested.svelte
 <p>The answer is {answer}</p>
 \`\`\`
 
-> [Svelteのサンプル](https://svelte.dev/tutorial/default-values)
+> Svelteのサンプル: https://svelte.dev/tutorial/default-values
 
-## # イベント伝搬
+## イベント伝搬
 
 　色々と手段はあると思う。
 まず大元のコンポーネント、ルートコンポーネントにて、イベントが発火した際に処理したい関数と、
@@ -76,15 +88,15 @@ Nested.svelte
 </button>
 \`\`\`
 
-> [Svelteのサンプル](https://svelte.dev/tutorial/event-modifiers)
+> Svelteのサンプル: https://svelte.dev/tutorial/event-modifiers
 
-## # Modalの実装
+## Modalの実装
 
 　Modalに関してModalコンポーネントのサンプルコードをそのまま採用した。
 
-> [Modalのサンプルコード](https://github.com/flekschas/svelte-simple-modal/blob/v0.8.0/src/Modal.svelte)
+> Modalのサンプルコード: https://github.com/flekschas/svelte-simple-modal/blob/v0.8.0/src/Modal.svelte
 
-> [Svelteのサンプル](https://svelte.dev/repl/033e824fad0a4e34907666e7196caec4?version=3.4.1)
+> Svelteのサンプル: https://svelte.dev/repl/033e824fad0a4e34907666e7196caec4?version=3.4.1
 
 　Modalコンポーネントの使い方としては以下のようにラップする形で用いる。
 
@@ -114,7 +126,9 @@ const showPopup = (num) => {
 <div on:click={showPopup(100)}></div>
 \`\`\`
 
-## # DnDの実装
+<br>
+
+## DnDの実装
 
 　ドラッッグアンドドロップの実装が一番の難関であったが、なんとか直感的なUXを実現できたかと思う。
 スマホの場合の挙動方針を今迷っているが、PCの挙動はほとんど満足しているものとなっている。
@@ -123,86 +137,42 @@ const showPopup = (num) => {
 　注意点としては、Modalのイベントと競合してしまってうまく動作しない箇所があったので、
 Modal.svelteの[134行目](https://github.com/flekschas/svelte-simple-modal/blob/v0.8.0/src/Modal.svelte#L134)「__event.preventDefault()__」をコメントアウトすることでうまく動くようになった。
 
-> [Svelteのサンプル](https://svelte.dev/repl/b4ac32e84dc24c079d7a5c243f787d26?version=3.32.1)
+> Svelteのサンプル: https://svelte.dev/repl/b4ac32e84dc24c079d7a5c243f787d26?version=3.32.1
 
-## # 成果
+## 成果
 
 　実際の見た目は以下のようになる。
 
 - [ソースコード](https://github.com/zodiac-G12/palladocs)
 - [実際のサイト](https://zodiac-g12.github.io/palladocs/)
 
-![hoge](/src/assets/palladocs_screen.webp)
+<picture>
+  <source type="image/webp" srcset="/blog/palladocs_screen.webp">
+  <img alt="" src="/blog/palladocs_screen.png" decoding="async" style="width: 100%; margin: auto;border: none; box-shadow: none;"></img>
+</picture>
 
-## # 所感
+<br>
+
+## 所感
 　Svelteは超軽くて早いのでいいなと思った。
 そして自由度が高い。実用回りも続々と出来上がってきていて、今後に大いに期待している。
 
 　今後このアプリをアカウントログイン制にして、Firebaseなどを用いてデータベースも作って、Apolloとかと連携しても面白いなと考えている。
 
 　あとは、スマホ版サイトのUXを改善したい。改善出来そうだよという人はコメントしてくださると嬉しい。妙案があれば賜りたい。
-`;
 
-const Content: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
-  const imgWidth = isSP() ? "100%" : "50%";
-  const imgMarginLeft = isSP() ? "0%" : "25%";
+`
+        }
+    },
+    computed: {
+        kiji() {
+            if (!process.client) console.log(this.prekiji.length);
+            return marked(this.prekiji);
+        },
+    },
+    components: {
+        DefaultArticle,
+    },
+}
 
-  return (
-    <div class={noaContainer}>
-      <div
-        style={{
-          background: "white",
-          padding: "5px 10px 10px 10px",
-          "margin-bottom": "0px",
-        }}
-      >
-        <h1 style={{ "text-align": "center" }}>SvelteでTODOアプリを作った</h1>
-        <div style={{ "text-align": "right" }}>2023年7月16日 公開</div>
-        <div style={{ "text-align": "center", width: "100%" }}>
-          <div
-            style={{
-              "margin-left": imgMarginLeft,
-              width: imgWidth,
-              "box-shadow": "2px 2px 4px rgba(0, 0, 0, 0.45)",
-            }}
-          >
-            <Img src={"svelte.png"} width={"100%"} objectFit={"contain"} />
-          </div>
-        </div>
-      </div>
-      <div class={contentContainer}>
-        <SolidMarkdown
-          children={markdown}
-          components={{
-            code({ children, ...props }) {
-              return (
-                <Highlight
-                  {...props}
-                  children={String(children).replace(/\n$/, "")}
-                  autoDetect={true}
-                />
-              );
-            },
-          }}
-        />
-      </div>
-    </div>
-  );
-};
-
-export default Content;
-
-const contentContainer = css({
-  background: "white",
-  padding: "5vw 5vw",
-  img: {
-    marginLeft: "5%",
-    maxWidth: "90%",
-  },
-});
-
-const noaContainer = css({
-  background: "indigo",
-  padding: "10vw 5vw 10vw 5vw",
-  minHeight: "calc(100vh - 20vw)",
-});
+</script>

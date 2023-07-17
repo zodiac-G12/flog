@@ -12,7 +12,7 @@ type ArticleContent = {
   img: string;
 };
 
-const Content: Component<{
+export const Content: Component<{
   isSP: Accessor<boolean>;
   articleContents: ArticleContent;
 }> = ({ isSP, articleContents }) => {
@@ -67,8 +67,6 @@ const Content: Component<{
     </div>
   );
 };
-
-export default Content;
 
 const contentContainer = css({
   background: "white",

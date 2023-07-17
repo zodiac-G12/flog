@@ -1,12 +1,12 @@
 import { lazy, createEffect, createSignal } from "solid-js";
 import type { Component } from "solid-js";
 import { Router, Routes, Route } from "@solidjs/router";
+import { articles } from "./articles";
 
 const spMaxWidth = 450;
 
 const App: Component = () => {
   const Home = lazy(() => import("./pages/home"));
-  const Content = lazy(() => import("./pages/articles/content"));
   const [isSP, setIsSP] = createSignal(false);
 
   createEffect(() => {
@@ -21,7 +21,13 @@ const App: Component = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home isSP={isSP} />}></Route>
-        <Route path="/articles/:id" element={<Content isSP={isSP} />}></Route>
+        {
+          articles.map((article) => {
+            const Content = lazy(() => import(`./pages/articles/${article.path}`));
+
+            return <Route path={`/articles/${article.path}`} element={<Content isSP={isSP} />}></Route>;
+          })
+        }
       </Routes>
     </Router>
   );

@@ -11,7 +11,7 @@ export const ArticleView: Component<{
 }> = ({ article, isSP }) => {
   return (
     <Link
-      href={`/articles/${article.title}`}
+      href={`/articles/${article.path}`}
       class={ArticleViewContainer(isSP())}
     >
       <div class={ArticleImgContainer}>
