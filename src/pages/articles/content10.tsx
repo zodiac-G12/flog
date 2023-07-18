@@ -1,23 +1,9 @@
-<template>
-    <div>
-        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
-    </div>
-</template>
+import { Accessor } from "solid-js";
+import type { Component } from "solid-js";
+import { Content } from "@/components";
+import { articles } from "@/articles";
 
-
-<script>
-
-const DefaultArticle = () => import('~/components/default-article.vue');
-// import marked from 'marked';
-// import katex from 'katex';
-import marked from 'marked-katex';
-
-export default{
-    data: function() {
-        return {
-            link: "content10",
-            prekiji:
-`
+const markdown = `
 ## 内容
 　GraphQL APIでDBアクセスを大量に発生させる攻撃手法について、公式ドキュメントや参考記事をもとに、実際に攻撃が可能なのか確かめてみたという記事。
 
@@ -243,18 +229,16 @@ query {
 - [graphql-cost-analysis](https://github.com/pa-bru/graphql-cost-analysis)
 
 対策に関してはまた今度記事を書こうと思う。
-`
-        }
-    },
-    computed: {
-        kiji() {
-            if (!process.client) console.log(this.prekiji.length);
-            return marked(this.prekiji);
-        },
-    },
-    components: {
-        DefaultArticle,
-    },
-}
+`;
 
-</script>
+const Content10: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content10"
+  );
+
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
+};
+
+export default Content10;

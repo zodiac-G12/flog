@@ -1,23 +1,9 @@
-<template>
-    <div>
-        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
-    </div>
-</template>
+import { Accessor } from "solid-js";
+import type { Component } from "solid-js";
+import { Content } from "@/components";
+import { articles } from "@/articles";
 
-
-<script>
-
-const DefaultArticle = () => import('~/components/default-article.vue');
-// import marked from 'marked';
-// import katex from 'katex';
-import marked from 'marked-katex';
-
-export default{
-    data: function() {
-        return {
-            link: "content8",
-            prekiji:
-`
+const markdown = `
 ## きっかけ
 　ひろゆきさんとひげおやじさんのいちゃいちゃてぇてぇ動画を見ていて懐疑的になったので記事を書くことにした。
 https://www.youtube.com/watch?v=ddfOSHMpVi8
@@ -76,18 +62,16 @@ https://www.youtube.com/watch?v=ddfOSHMpVi8
 
 　ひろゆきさんも私と同じようなことを言っていて、動画の最後の方でひげおやじさんがひろゆきさんに「さてはお前モテないな〜？W」
 と言っていたが、まったくもっておっしゃる通りである。さーせん。
-`
-        }
-    },
-    computed: {
-        kiji() {
-            if (!process.client) console.log(this.prekiji.length);
-            return marked(this.prekiji);
-        },
-    },
-    components: {
-        DefaultArticle,
-    },
-}
+`;
 
-</script>
+const Content8: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content8"
+  );
+
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
+};
+
+export default Content8;

@@ -1,23 +1,9 @@
-<template>
-    <div>
-        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
-    </div>
-</template>
+import { Accessor } from "solid-js";
+import type { Component } from "solid-js";
+import { Content } from "@/components";
+import { articles } from "@/articles";
 
-
-<script>
-
-const DefaultArticle = () => import('~/components/default-article.vue');
-// import marked from 'marked';
-// import katex from 'katex';
-import marked from 'marked-katex';
-
-export default{
-    data: function() {
-        return {
-            link: "content11",
-            prekiji:
-`
+const markdown = `
 ## 想定読者
 　Reactをある程度理解していて、興味がある人。Chart.jsに興味がある人
 ## 使用技術
@@ -172,18 +158,16 @@ export default App;
 わかったこととしては、react-chartjs-2も所詮はChart.jsのラッパーであるが、なんにしてもChart.jsの公式ドキュメントが読みづらくてかなわなかった。
 非常に有用性のあるツールなだけに残念。stackoverflowなどや公式issueでも露頭に迷っている人が多く見られた。
 こういう人たちのためにも、自分がアウトプットするか、contributeしたい。
-`
-        }
-    },
-    computed: {
-        kiji() {
-            if (!process.client) console.log(this.prekiji.length);
-            return marked(this.prekiji);
-        },
-    },
-    components: {
-        DefaultArticle,
-    },
-}
+`;
 
-</script>
+const Content11: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content11"
+  );
+
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
+};
+
+export default Content11;

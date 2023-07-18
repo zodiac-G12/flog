@@ -1,23 +1,9 @@
-<template>
-    <div>
-        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
-    </div>
-</template>
+import { Accessor } from "solid-js";
+import type { Component } from "solid-js";
+import { Content } from "@/components";
+import { articles } from "@/articles";
 
-
-<script>
-
-const DefaultArticle = () => import('~/components/default-article.vue');
-// import marked from 'marked';
-// import katex from 'katex';
-import marked from 'marked-katex';
-
-export default{
-    data: function() {
-        return {
-            link: "content5",
-            prekiji:
-`
+const markdown = `
 ## WebP
 
 Google先生が開発している画像フォーマットで、サイズがちっちゃくできる。
@@ -44,18 +30,16 @@ __static__ ディレクトリ直下の、png、jpg、jpeg拡張子の画像フ�
 for file in \`find ./static \\( -name \\*.png -o -name \\*.jpg -o -name \\*jpeg \\) -print\`; do ~/libwebp-1.1.0-mac-10.15/bin/cwebp "$file" -o "$\{file%.*}.webp"; done
 \`\`\`
 
-`
-        }
-    },
-    computed: {
-        kiji() {
-            if (!process.client) console.log(this.prekiji.length);
-            return marked(this.prekiji);
-        },
-    },
-    components: {
-        DefaultArticle,
-    },
-}
+`;
 
-</script>
+const Content5: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content5"
+  );
+
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
+};
+
+export default Content5;

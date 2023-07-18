@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [solidPlugin()],
   build: {
     target: "esnext",
+    outDir: "docs",
   },
   test: {
     globals: true,

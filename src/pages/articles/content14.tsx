@@ -1,23 +1,9 @@
-<template>
-    <div>
-        <DefaultArticle :content="{link:this.link, kiji:kiji}"/>
-    </div>
-</template>
+import { Accessor } from "solid-js";
+import type { Component } from "solid-js";
+import { Content } from "@/components";
+import { articles } from "@/articles";
 
-
-<script>
-
-const DefaultArticle = () => import('~/components/default-article.vue');
-// import marked from 'marked';
-// import katex from 'katex';
-import marked from 'marked-katex';
-
-export default{
-    data: function() {
-        return {
-            link: "content14",
-            prekiji:
-`
+const markdown = `
 ## 問題
 　EN: A leaf is torn from a paperback novel. The sum of the numbers on the remaining pages is 15000.
 What are the page numbers on the torn leaf.
@@ -117,19 +103,16 @@ __「引き抜かれたページは最終ページの後ろの紙のページだ
 TypeScriptのノリでRustもクラス作ってメソッドはやしてやろうと思ったが、
 調べたりして試してみたが、結局思うようなプログラムが書けなくて諦めてしまった。
 訓練をもっと積んでいきたい所存である。
+`;
 
-`
-        }
-    },
-    computed: {
-        kiji() {
-            if (!process.client) console.log(this.prekiji.length);
-            return marked(this.prekiji);
-        },
-    },
-    components: {
-        DefaultArticle,
-    },
-}
+const Content14: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content14"
+  );
 
-</script>
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
+};
+
+export default Content14;

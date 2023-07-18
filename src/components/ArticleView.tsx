@@ -73,10 +73,10 @@ const ArticleImgContainer = css({
 
 const ArticleTitle = css({
   marginTop: "10px",
-  fontSize: "100%",
+  fontSize: "20px",
 });
 
 const ArticleCreatedView = css({
-  fontSize: "80%",
+  fontSize: "15px",
   marginTop: "10px",
 });
