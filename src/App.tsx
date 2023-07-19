@@ -24,7 +24,7 @@ const App: Component = () => {
         <For each={articles}>
           {(article) => {
             const Content = lazy(
-                () => import(`./pages/articles/${article.path}`)
+                () => import(`./pages/articles/${article.path}.tsx`)
             );
 
             return (
