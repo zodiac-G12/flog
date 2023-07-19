@@ -21,13 +21,18 @@ const App: Component = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home isSP={isSP} />}></Route>
-        {
-          articles.map((article) => {
-            const Content = lazy(() => import(`./pages/articles/${article.path}`));
+        {articles.map((article) => {
+          const Content = lazy(
+            () => import(`./pages/articles/${article.path}`)
+          );
 
-            return <Route path={`/articles/${article.path}`} element={<Content isSP={isSP} />}></Route>;
-          })
-        }
+          return (
+            <Route
+              path={`/articles/${article.path}`}
+              element={<Content isSP={isSP} />}
+            ></Route>
+          );
+        })}
       </Routes>
     </Router>
   );

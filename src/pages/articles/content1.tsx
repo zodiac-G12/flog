@@ -1,6 +1,6 @@
 import { Accessor } from "solid-js";
 import type { Component } from "solid-js";
-import { Content } from '@/components';
+import { Content } from "@/components";
 import { articles } from "@/articles";
 
 const markdown = `
@@ -18,10 +18,14 @@ LightHouseのスコアがあまりに低かったので、これで少し改善�
 </center>
 `;
 
-const Content1: Component<{isSP: Accessor<boolean>}> = ({ isSP }) => {
-  const articleContents = articles.find((article) => article.path === "content1");
+const Content1: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content1"
+  );
 
-  return <Content isSP={isSP} articleContents={{markdown, ...articleContents}}/>;
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
 };
 
 export default Content1;

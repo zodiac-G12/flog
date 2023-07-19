@@ -1,6 +1,6 @@
 import { Accessor } from "solid-js";
 import type { Component } from "solid-js";
-import { Content } from '@/components';
+import { Content } from "@/components";
 import { articles } from "@/articles";
 
 const markdown = `
@@ -109,10 +109,14 @@ const markdown = `
 
 `;
 
-const Content2: Component<{isSP: Accessor<boolean>}> = ({ isSP }) => {
-  const articleContents = articles.find((article) => article.path === "content2");
+const Content2: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+  const articleContents = articles.find(
+    (article) => article.path === "content2"
+  );
 
-  return <Content isSP={isSP} articleContents={{markdown, ...articleContents}}/>;
+  return (
+    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+  );
 };
 
 export default Content2;
