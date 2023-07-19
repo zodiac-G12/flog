@@ -129,7 +129,7 @@ blockquote:before {
   position: absolute;
   top: 15px;
   left: 15px;
-  content: "💡";
+  content: '💡';
   font-style: normal;
   color: #9dd4ff;
   font-size: 30px;

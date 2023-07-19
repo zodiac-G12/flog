@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## WebP
@@ -32,13 +32,16 @@ for file in \`find ./static \\( -name \\*.png -o -name \\*.jpg -o -name \\*jpeg 
 
 `;
 
-const Content5: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content5: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content5"
+      (article) => article.path === 'content5'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

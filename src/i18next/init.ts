@@ -1,12 +1,12 @@
-import i18next from "i18next";
+import i18next from 'i18next';
 
 await i18next.init({
-  lng: "ja",
+  lng: 'ja',
   debug: true,
   resources: {
     ja: {
       translation: {
-        serviceName: "FLOG",
+        serviceName: 'FLOG',
         title: '"ぞでぃあっく" の技術ブログ',
       },
     },

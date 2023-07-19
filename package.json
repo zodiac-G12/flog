@@ -20,6 +20,9 @@
   "license": "MIT",
   "devDependencies": {
     "eslint-config-google": "^0.14.0",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "highlight.js": "^11.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",

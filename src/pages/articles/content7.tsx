@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## 前書き
@@ -178,13 +178,16 @@ meshのonClick()が発火した際に、onClick内でステートフックを呼
 回答を求めるアルゴリズムについては、線形代数の初歩的な素養を要求し、複雑で長くなってしまうため今回は割愛する。
 `;
 
-const Content7: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content7: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content7"
+      (article) => article.path === 'content7'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

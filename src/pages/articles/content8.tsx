@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## きっかけ
@@ -64,13 +64,16 @@ https://www.youtube.com/watch?v=ddfOSHMpVi8
 と言っていたが、まったくもっておっしゃる通りである。さーせん。
 `;
 
-const Content8: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content8: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content8"
+      (article) => article.path === 'content8'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

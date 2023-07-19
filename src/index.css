@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Gotham Bold";
-  src: url("./assets/GothamBold.ttf");
+  font-family: 'Gotham Bold';
+  src: url('./assets/GothamBold.ttf');
 }
 
 @font-face {
-  font-family: "Gotham";
-  src: url("./assets/GothamMedium.ttf");
+  font-family: 'Gotham';
+  src: url('./assets/GothamMedium.ttf');
 }
 
 @font-face {
-  font-family: "MyFont";
+  font-family: 'MyFont';
   src: url(./assets/logotypejp_mp_b_1.1.ttf);
 }
 
 body {
   margin: 0;
-  font-family: "GothamBold", "GothamMedium", "Helvetica Nune", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", sans-serif;
+  font-family: 'GothamBold', 'GothamMedium', 'Helvetica Nune', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +27,7 @@ h2 {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   /* margin-left: 41px; */
   /* width: calc(100% - 41px - 60px - 15px + 4px); */
@@ -51,7 +51,7 @@ blockquote:before {
   position: absolute;
   top: 15px;
   left: 15px;
-  content: "💡";
+  content: '💡';
   font-style: normal;
   /* font-family: FontAwesome; */
   color: #9dd4ff;

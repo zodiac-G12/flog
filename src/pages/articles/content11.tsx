@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## 想定読者
@@ -160,13 +160,16 @@ export default App;
 こういう人たちのためにも、自分がアウトプットするか、contributeしたい。
 `;
 
-const Content11: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content11: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content11"
+      (article) => article.path === 'content11'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

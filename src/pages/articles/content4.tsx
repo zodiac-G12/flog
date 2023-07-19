@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## Rustのコード
@@ -59,13 +59,16 @@ fn fibd(n: u32) -> i128 {
 
 `;
 
-const Content4: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content4: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content4"
+      (article) => article.path === 'content4'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

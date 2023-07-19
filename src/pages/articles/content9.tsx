@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## 想定読者
@@ -149,13 +149,16 @@ import marked from 'marked-katex';
 記述するコードの量も非常に少なくて済むという、公式の主張にも納得がいった。
 `;
 
-const Content9: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content9: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content9"
+      (article) => article.path === 'content9'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 

@@ -1,7 +1,7 @@
-import { Accessor } from "solid-js";
-import type { Component } from "solid-js";
-import { Content } from "@/components";
-import { articles } from "@/articles";
+import {Accessor} from 'solid-js';
+import type {Component} from 'solid-js';
+import {Content} from '@/components';
+import {articles} from '@/articles';
 
 const markdown = `
 ## 従来のブログよりグレードアップ
@@ -18,13 +18,16 @@ LightHouseのスコアがあまりに低かったので、これで少し改善�
 </center>
 `;
 
-const Content1: Component<{ isSP: Accessor<boolean> }> = ({ isSP }) => {
+const Content1: Component<{ isSP: Accessor<boolean> }> = (props) => {
   const articleContents = articles.find(
-    (article) => article.path === "content1"
+      (article) => article.path === 'content1'
   );
 
   return (
-    <Content isSP={isSP} articleContents={{ markdown, ...articleContents }} />
+    <Content
+      isSP={props.isSP}
+      articleContents={{markdown, ...articleContents}}
+    />
   );
 };
 
