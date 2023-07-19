@@ -11,6 +11,7 @@
     "prepare": "husky install",
     "dev": "vite",
     "build": "vite build --base=/flog/",
+    "build:local": "vite build",
     "serve": "vite preview",
     "test": "vitest",
     "testrun": "vitest run",
