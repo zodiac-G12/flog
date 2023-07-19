@@ -28,6 +28,5 @@
     "react": {
       "version": "detect"
     }
-  },
-  "ignorePatterns": ["./docs"]
+  }
 }
