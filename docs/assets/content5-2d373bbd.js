@@ -1,4 +1,4 @@
-import{a as s}from"./Content-cd8c95a1.js";import{a as p,c as n}from"./index-7adfba6e.js";const l=`
+import{a as s}from"./Content-36c4bc1e.js";import{a as p,c as n}from"./index-a2cd9dfd.js";const l=`
 ## WebP
 
 Google先生が開発している画像フォーマットで、サイズがちっちゃくできる。

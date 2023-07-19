@@ -1,4 +1,4 @@
-import{a as o}from"./Content-cd8c95a1.js";import{a as r,c as a}from"./index-7adfba6e.js";const s=`
+import{a as o}from"./Content-36c4bc1e.js";import{a as r,c as a}from"./index-a2cd9dfd.js";const s=`
 ## きっかけ
 　ひろゆきさんとひげおやじさんのいちゃいちゃてぇてぇ動画を見ていて懐疑的になったので記事を書くことにした。
 https://www.youtube.com/watch?v=ddfOSHMpVi8

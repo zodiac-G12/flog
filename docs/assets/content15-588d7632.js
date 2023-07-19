@@ -1,4 +1,4 @@
-import{a as o}from"./Content-cd8c95a1.js";import{a as l,c as a}from"./index-7adfba6e.js";const c=`
+import{a as o}from"./Content-36c4bc1e.js";import{a as l,c as a}from"./index-a2cd9dfd.js";const c=`
 ## 経緯
 　去年からReactでずっと作っていたTODOアプリがあって、
 途中で飽きたので、そのまま似たような機能のものをSvelteで実装した。

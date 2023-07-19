@@ -1,4 +1,4 @@
-import{a as r}from"./Content-cd8c95a1.js";import{a as n,c as s}from"./index-7adfba6e.js";const p=`
+import{a as r}from"./Content-36c4bc1e.js";import{a as n,c as s}from"./index-a2cd9dfd.js";const p=`
 ## 内容
 　ハフマン符号化のアルゴリズム紹介。
 
