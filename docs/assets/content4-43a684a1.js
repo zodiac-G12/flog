@@ -1,4 +1,4 @@
-import{a as i}from"./Content-947fbbee.js";import{a as r,c as e}from"./index-02ebbe90.js";const f=`
+import{C as i}from"./Content-c91edaf0.js";import{a as r,c as e}from"./index-bf05256e.js";const f=`
 ## Rustのコード
 
 \`\`\`rust

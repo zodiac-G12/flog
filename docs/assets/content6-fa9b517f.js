@@ -1,4 +1,4 @@
-import{a as o}from"./Content-947fbbee.js";import{a as r,c as a}from"./index-02ebbe90.js";const n=`
+import{C as o}from"./Content-c91edaf0.js";import{a as r,c as n}from"./index-bf05256e.js";const a=`
 ## スクリプト
 
 config において __12345@gmail.com__ というemailのコミットに対して過去全部のコミット修正
@@ -41,4 +41,4 @@ git log --pretty=full
 git push -f
 \`\`\`
 
-`,m=t=>{const e=r.find(i=>i.path==="content6");return a(o,{get isSP(){return t.isSP},get articleContents(){return{markdown:n,...e}}})};export{m as default};
+`,m=t=>{const e=r.find(i=>i.path==="content6");return n(o,{get isSP(){return t.isSP},get articleContents(){return{markdown:a,...e}}})};export{m as default};

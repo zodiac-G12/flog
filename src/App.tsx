@@ -1,12 +1,29 @@
-import {lazy, createEffect, createSignal, For} from 'solid-js';
+import {lazy, createEffect, createSignal, For, Accessor} from 'solid-js';
 import type {Component} from 'solid-js';
 import {Router, Routes, Route} from '@solidjs/router';
-import {articles} from './articles';
+import {articles, Article} from './articles';
 
 const spMaxWidth = 450;
 
+const createArticle: Component<{
+  article: Article;
+  isSP: Accessor<boolean>;
+}> = (props) => {
+  const {article, isSP} = props;
+
+  const Content = lazy(() => import(`./pages/articles/${article.path}.tsx`));
+
+  return (
+    <Route
+      path={`/articles/${article.path}`}
+      element={<Content isSP={isSP} />}
+    />
+  );
+};
+
 const App: Component = () => {
-  const Home = lazy(() => import('./pages/home'));
+  const homeFileName = 'home';
+  const Home = lazy(() => import(`./pages/${homeFileName}.tsx`));
   const [isSP, setIsSP] = createSignal(false);
 
   createEffect(() => {
@@ -22,18 +39,7 @@ const App: Component = () => {
       <Routes>
         <Route path="/" element={<Home isSP={isSP} />} />
         <For each={articles}>
-          {(article) => {
-            const Content = lazy(
-                () => import(`./pages/articles/${article.path}.tsx`)
-            );
-
-            return (
-              <Route
-                path={`/articles/${article.path}`}
-                element={<Content isSP={isSP} />}
-              />
-            );
-          }}
+          {(article) => createArticle({article, isSP})}
         </For>
       </Routes>
     </Router>

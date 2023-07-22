@@ -1,4 +1,4 @@
-import{a as n}from"./Content-947fbbee.js";import{a as _,c as e}from"./index-02ebbe90.js";const i=`
+import{C as n}from"./Content-c91edaf0.js";import{a as _,c as e}from"./index-bf05256e.js";const i=`
 ## 天才たちの築いた分野「情報理論」
 
 　ウィーナとシャノンが確立したと言われる分野である。
