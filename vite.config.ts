@@ -3,6 +3,7 @@ import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
   plugins: [solidPlugin()],
+  base: process.env.GITHUB_PAGES ? 'flog' : './',
   build: {
     target: 'esnext',
     outDir: 'docs',

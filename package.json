@@ -12,7 +12,6 @@
     "prepare": "husky install",
     "dev": "vite",
     "build": "vite build",
-    "build:local": "vite build",
     "serve": "vite preview",
     "test": "vitest",
     "testrun": "vitest run",
