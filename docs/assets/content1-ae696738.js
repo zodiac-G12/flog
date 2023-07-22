@@ -1,4 +1,4 @@
-import{C as n}from"./Content-c91edaf0.js";import{a as s,c as o}from"./index-bf05256e.js";const a=`
+import{C as n}from"./Content-4842a127.js";import{a as s,c as o}from"./index-e0f91b5f.js";const a=`
 ## 従来のブログよりグレードアップ
 
 　私は気がついた。シンプルイズベスト、一番格好いいことに。

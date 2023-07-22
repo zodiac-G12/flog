@@ -1,4 +1,4 @@
-import{C as o}from"./Content-c91edaf0.js";import{a as r,c as n}from"./index-bf05256e.js";const a=`
+import{C as o}from"./Content-4842a127.js";import{a as r,c as n}from"./index-e0f91b5f.js";const a=`
 ## スクリプト
 
 config において __12345@gmail.com__ というemailのコミットに対して過去全部のコミット修正
