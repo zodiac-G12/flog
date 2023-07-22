@@ -1,4 +1,4 @@
-import{C as r}from"./Content-c91edaf0.js";import{a,c as o}from"./index-bf05256e.js";const c=`
+import{a}from"./Content-77dc1e15.js";import{a as r,c as o}from"./index-e5058caf.js";const c=`
 ## 前書き
 　この記事は私が __「React」__ を学ぶために「LightsOutゲーム」を制作し、その過程で獲得したエクスペリエンスを共有するものである。
 前提知識としてJavaScriptの基本的な知識を要求する。  
@@ -171,4 +171,4 @@ meshのonClick()が発火した際に、onClick内でステートフックを呼
 「SHOW ANSWER」というボタンをクリックすることで、全部消灯するのに必要な、タップするべき場所のマス(ブロック)が回転するという機能である。
 
 回答を求めるアルゴリズムについては、線形代数の初歩的な素養を要求し、複雑で長くなってしまうため今回は割愛する。
-`,h=t=>{const e=a.find(s=>s.path==="content7");return o(r,{get isSP(){return t.isSP},get articleContents(){return{markdown:c,...e}}})};export{h as default};
+`,h=t=>{const e=r.find(s=>s.path==="content7");return o(a,{get isSP(){return t.isSP},get articleContents(){return{markdown:c,...e}}})};export{h as default};

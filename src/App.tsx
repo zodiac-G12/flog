@@ -4,6 +4,7 @@ import {Router, Routes, Route} from '@solidjs/router';
 import {articles, Article} from './articles';
 
 const spMaxWidth = 450;
+const Home = lazy(() => import(`./pages/Home`));
 
 const createArticle: Component<{
   article: Article;
@@ -22,8 +23,6 @@ const createArticle: Component<{
 };
 
 const App: Component = () => {
-  const homeFileName = 'home';
-  const Home = lazy(() => import(`./pages/${homeFileName}.tsx`));
   const [isSP, setIsSP] = createSignal(false);
 
   createEffect(() => {

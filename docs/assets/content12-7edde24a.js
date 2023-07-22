@@ -1,4 +1,4 @@
-import{C as r}from"./Content-c91edaf0.js";import{a as s,c as a}from"./index-bf05256e.js";const l=`
+import{a as r}from"./Content-77dc1e15.js";import{a as s,c as a}from"./index-e5058caf.js";const l=`
 ## 内容
 　以前の記事([GraphQL APIでDBアクセスを大量に発生させる攻撃手法について](http://localhost:3000/blog/content10))をうけて、
 攻撃手法に対する対策を考えて試してみたという記事
