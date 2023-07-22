@@ -11,7 +11,7 @@
     "start": "vite",
     "prepare": "husky install",
     "dev": "vite",
-    "build": "export GITHUB_PAGES=TRUE && vite build",
+    "build": "vite build",
     "build:local": "vite build",
     "serve": "vite preview",
     "test": "vitest",
