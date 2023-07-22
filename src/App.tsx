@@ -2,9 +2,9 @@ import {lazy, createEffect, createSignal, For, Accessor} from 'solid-js';
 import type {Component} from 'solid-js';
 import {Router, Routes, Route} from '@solidjs/router';
 import {articles, Article} from './articles';
-
+import Home from './pages/home';
 const spMaxWidth = 450;
-const Home = lazy(() => import(`./pages/Home`));
+// const Home = lazy(() => import(`./pages/Home`));
 
 const createArticle: Component<{
   article: Article;

@@ -1,4 +1,4 @@
-import{a as o}from"./Content-77dc1e15.js";import{a as r,c as a}from"./index-e5058caf.js";const s=`
+import{a as o,c as r,C as a}from"./index-f3840764.js";const s=`
 ## きっかけ
 　ひろゆきさんとひげおやじさんのいちゃいちゃてぇてぇ動画を見ていて懐疑的になったので記事を書くことにした。
 https://www.youtube.com/watch?v=ddfOSHMpVi8
@@ -57,4 +57,4 @@ https://www.youtube.com/watch?v=ddfOSHMpVi8
 
 　ひろゆきさんも私と同じようなことを言っていて、動画の最後の方でひげおやじさんがひろゆきさんに「さてはお前モテないな〜？W」
 と言っていたが、まったくもっておっしゃる通りである。さーせん。
-`,d=t=>{const e=r.find(n=>n.path==="content8");return a(o,{get isSP(){return t.isSP},get articleContents(){return{markdown:s,...e}}})};export{d as default};
+`,i=t=>{const e=o.find(n=>n.path==="content8");return r(a,{get isSP(){return t.isSP},get articleContents(){return{markdown:s,...e}}})};export{i as default};

@@ -1,4 +1,4 @@
-import{a as n}from"./Content-77dc1e15.js";import{a as s,c as i}from"./index-e5058caf.js";const a=`
+import{a as n,c as s,C as i}from"./index-f3840764.js";const a=`
 ## Rustのコード
 
 \`\`\`rust
@@ -33,4 +33,4 @@ $ cargo run
 39
 \`\`\`
 
-`,l=t=>{const r=s.find(e=>e.path==="content3");return i(n,{get isSP(){return t.isSP},get articleContents(){return{markdown:a,...r}}})};export{l as default};
+`,c=t=>{const r=n.find(e=>e.path==="content3");return s(i,{get isSP(){return t.isSP},get articleContents(){return{markdown:a,...r}}})};export{c as default};

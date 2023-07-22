@@ -1,4 +1,4 @@
-import{a as o}from"./Content-77dc1e15.js";import{a as s,c as r}from"./index-e5058caf.js";const n=`
+import{a as o,c as s,C as r}from"./index-f3840764.js";const n=`
 ## 想定読者
 　Reactをある程度理解していて、興味がある人。Chart.jsに興味がある人
 ## 使用技術
@@ -153,4 +153,4 @@ export default App;
 わかったこととしては、react-chartjs-2も所詮はChart.jsのラッパーであるが、なんにしてもChart.jsの公式ドキュメントが読みづらくてかなわなかった。
 非常に有用性のあるツールなだけに残念。stackoverflowなどや公式issueでも露頭に迷っている人が多く見られた。
 こういう人たちのためにも、自分がアウトプットするか、contributeしたい。
-`,l=t=>{const e=s.find(a=>a.path==="content11");return r(o,{get isSP(){return t.isSP},get articleContents(){return{markdown:n,...e}}})};export{l as default};
+`,c=t=>{const e=o.find(a=>a.path==="content11");return s(r,{get isSP(){return t.isSP},get articleContents(){return{markdown:n,...e}}})};export{c as default};

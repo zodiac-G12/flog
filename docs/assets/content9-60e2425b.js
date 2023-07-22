@@ -1,4 +1,4 @@
-import{a as r}from"./Content-77dc1e15.js";import{a as s,c as o}from"./index-e5058caf.js";const i=`
+import{a as r,c as s,C as o}from"./index-f3840764.js";const l=`
 ## 想定読者
 　JavaScriptの基本が分かる人。JavaScriptに興味がある人。Slideアプリを自作したい人。Svelteが気になっている人。
 
@@ -142,4 +142,4 @@ import marked from 'marked-katex';
 そして、プロパティ更新をReactのようにあまり気にしなくて良いので、非常に楽ちん。
 
 記述するコードの量も非常に少なくて済むという、公式の主張にも納得がいった。
-`,n=e=>{const t=s.find(a=>a.path==="content9");return o(r,{get isSP(){return e.isSP},get articleContents(){return{markdown:i,...t}}})};export{n as default};
+`,d=e=>{const t=r.find(a=>a.path==="content9");return s(o,{get isSP(){return e.isSP},get articleContents(){return{markdown:l,...t}}})};export{d as default};

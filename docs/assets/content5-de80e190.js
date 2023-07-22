@@ -1,4 +1,4 @@
-import{a as s}from"./Content-77dc1e15.js";import{a as p,c as n}from"./index-e5058caf.js";const l=`
+import{a as s,c as p,C as n}from"./index-f3840764.js";const l=`
 ## WebP
 
 Google先生が開発している画像フォーマットで、サイズがちっちゃくできる。
@@ -25,4 +25,4 @@ __static__ ディレクトリ直下の、png、jpg、jpeg拡張子の画像フ�
 for file in \`find ./static \\( -name \\*.png -o -name \\*.jpg -o -name \\*jpeg \\) -print\`; do ~/libwebp-1.1.0-mac-10.15/bin/cwebp "$file" -o "\${file%.*}.webp"; done
 \`\`\`
 
-`,g=e=>{const o=p.find(t=>t.path==="content5");return n(s,{get isSP(){return e.isSP},get articleContents(){return{markdown:l,...o}}})};export{g as default};
+`,r=e=>{const o=s.find(t=>t.path==="content5");return p(n,{get isSP(){return e.isSP},get articleContents(){return{markdown:l,...o}}})};export{r as default};
