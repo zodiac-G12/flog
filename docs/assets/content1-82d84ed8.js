@@ -1,4 +1,4 @@
-import{a as r,c as s,C as a}from"./index-f3840764.js";const o=`
+import{a as n}from"./Content-cd17dac9.js";import{a as s,c as a}from"./index-c6a12b0a.js";const o=`
 ## 従来のブログよりグレードアップ
 
 　私は気がついた。シンプルイズベスト、一番格好いいことに。
@@ -11,4 +11,4 @@ LightHouseのスコアがあまりに低かったので、これで少し改善�
 <img src="https://h.accesstrade.net/sp/rr?rk=0100n6l400kele" alt="アクセストレード パートナーサイト募集" border="0" style="max-width: 300px;"/>
 </a>
 </center>
-`,l=t=>{const e=r.find(n=>n.path==="content1");return s(a,{get isSP(){return t.isSP},get articleContents(){return{markdown:o,...e}}})};export{l as default};
+`,i=t=>{const e=s.find(r=>r.path==="content1");return a(n,{get isSP(){return t.isSP},get articleContents(){return{markdown:o,...e}}})};export{i as default};

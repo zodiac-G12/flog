@@ -1,4 +1,4 @@
-import{a as i,c as e,C as r}from"./index-f3840764.js";const f=`
+import{a as i}from"./Content-cd17dac9.js";import{a as r,c as e}from"./index-c6a12b0a.js";const f=`
 ## Rustのコード
 
 \`\`\`rust
@@ -52,4 +52,4 @@ fn fibd(n: u32) -> i128 {
 } 
 \`\`\`
 
-`,o=t=>{const n=i.find(a=>a.path==="content4");return e(r,{get isSP(){return t.isSP},get articleContents(){return{markdown:f,...n}}})};export{o as default};
+`,b=t=>{const n=r.find(a=>a.path==="content4");return e(i,{get isSP(){return t.isSP},get articleContents(){return{markdown:f,...n}}})};export{b as default};

@@ -1,4 +1,4 @@
-import{a as r,c as n,C as s}from"./index-f3840764.js";const p=`
+import{a as r}from"./Content-cd17dac9.js";import{a as n,c as s}from"./index-c6a12b0a.js";const p=`
 ## 内容
 　ハフマン符号化のアルゴリズム紹介。
 
@@ -273,4 +273,4 @@ console.log(huffman.encodedMap);
 それに、プロパティごとでファイル区切ってValueObjectにした方が良かったと思うが、
 当初ここまでファイルでかくなると思わなかったし、そこまでやるつもりもなかった。
 余裕があったらアップデートします。
-`,c=e=>{const t=r.find(a=>a.path==="content13");return n(s,{get isSP(){return e.isSP},get articleContents(){return{markdown:p,...t}}})};export{c as default};
+`,o=e=>{const t=n.find(a=>a.path==="content13");return s(r,{get isSP(){return e.isSP},get articleContents(){return{markdown:p,...t}}})};export{o as default};

@@ -1,4 +1,4 @@
-import{a as o,c as l,C as a}from"./index-f3840764.js";const c=`
+import{a as o}from"./Content-cd17dac9.js";import{a as l,c as a}from"./index-c6a12b0a.js";const c=`
 ## 経緯
 　去年からReactでずっと作っていたTODOアプリがあって、
 途中で飽きたので、そのまま似たような機能のものをSvelteで実装した。
@@ -142,4 +142,4 @@ Modal.svelteの[134行目](https://github.com/flekschas/svelte-simple-modal/blob
 
 　あとは、スマホ版サイトのUXを改善したい。改善出来そうだよという人はコメントしてくださると嬉しい。妙案があれば賜りたい。
 
-`,n=e=>{const t=o.find(s=>s.path==="content15");return l(a,{get isSP(){return e.isSP},get articleContents(){return{markdown:c,...t}}})};export{n as default};
+`,i=e=>{const t=l.find(s=>s.path==="content15");return a(o,{get isSP(){return e.isSP},get articleContents(){return{markdown:c,...t}}})};export{i as default};

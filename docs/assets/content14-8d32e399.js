@@ -1,4 +1,4 @@
-import{a as n,c as i,C as _}from"./index-f3840764.js";const o=`
+import{a as n}from"./Content-cd17dac9.js";import{a as i,c as _}from"./index-c6a12b0a.js";const o=`
 ## 問題
 　EN: A leaf is torn from a paperback novel. The sum of the numbers on the remaining pages is 15000.
 What are the page numbers on the torn leaf.
@@ -98,4 +98,4 @@ __「引き抜かれたページは最終ページの後ろの紙のページだ
 TypeScriptのノリでRustもクラス作ってメソッドはやしてやろうと思ったが、
 調べたりして試してみたが、結局思うようなプログラムが書けなくて諦めてしまった。
 訓練をもっと積んでいきたい所存である。
-`,s=a=>{const t=n.find(e=>e.path==="content14");return i(_,{get isSP(){return a.isSP},get articleContents(){return{markdown:o,...t}}})};export{s as default};
+`,d=a=>{const t=i.find(e=>e.path==="content14");return _(n,{get isSP(){return a.isSP},get articleContents(){return{markdown:o,...t}}})};export{d as default};

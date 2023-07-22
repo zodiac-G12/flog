@@ -1,4 +1,4 @@
-import{a,c as e,C as s}from"./index-f3840764.js";const n=`
+import{a}from"./Content-cd17dac9.js";import{a as e,c as s}from"./index-c6a12b0a.js";const n=`
 ## 内容
 　GraphQL APIでDBアクセスを大量に発生させる攻撃手法について、公式ドキュメントや参考記事をもとに、実際に攻撃が可能なのか確かめてみたという記事。
 
@@ -224,4 +224,4 @@ query {
 - [graphql-cost-analysis](https://github.com/pa-bru/graphql-cost-analysis)
 
 対策に関してはまた今度記事を書こうと思う。
-`,l=o=>{const t=a.find(r=>r.path==="content10");return e(s,{get isSP(){return o.isSP},get articleContents(){return{markdown:n,...t}}})};export{l as default};
+`,u=o=>{const t=e.find(r=>r.path==="content10");return s(a,{get isSP(){return o.isSP},get articleContents(){return{markdown:n,...t}}})};export{u as default};

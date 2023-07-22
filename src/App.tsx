@@ -1,10 +1,11 @@
 import {lazy, createEffect, createSignal, For, Accessor} from 'solid-js';
 import type {Component} from 'solid-js';
-import {Router, Routes, Route} from '@solidjs/router';
+import {Router, Routes, Route, hashIntegration} from '@solidjs/router';
 import {articles, Article} from './articles';
-import Home from './pages/home';
+
 const spMaxWidth = 450;
-// const Home = lazy(() => import(`./pages/Home`));
+const homeFileName = 'home';
+const Home = lazy(() => import(`./pages/${homeFileName}.tsx`));
 
 const createArticle: Component<{
   article: Article;
@@ -34,7 +35,7 @@ const App: Component = () => {
   });
 
   return (
-    <Router>
+    <Router source={hashIntegration()}>
       <Routes>
         <Route path="/" element={<Home isSP={isSP} />} />
         <For each={articles}>
