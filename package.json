@@ -1,7 +1,8 @@
 {
-  "name": "vite-template-solid",
+  "name": "FLOG",
   "version": "0.0.0",
   "description": "",
+  "homepage": "https://zodiac-g12.github.io/flog",
   "engines": {
     "pnpm": "8.6.x",
     "node": "20.x"
