@@ -1,4 +1,4 @@
-import{a as n}from"./Content-7b965906.js";import{a as i,c as _}from"./index-113907c2.js";const o=`
+import{a as n}from"./Content-947fbbee.js";import{a as i,c as _}from"./index-02ebbe90.js";const o=`
 ## 問題
 　EN: A leaf is torn from a paperback novel. The sum of the numbers on the remaining pages is 15000.
 What are the page numbers on the torn leaf.
