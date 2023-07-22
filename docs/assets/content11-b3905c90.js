@@ -1,4 +1,4 @@
-import{C as o}from"./Content-4842a127.js";import{a as s,c as r}from"./index-e0f91b5f.js";const n=`
+import{C as o}from"./Content-c91edaf0.js";import{a as s,c as r}from"./index-bf05256e.js";const n=`
 ## 想定読者
 　Reactをある程度理解していて、興味がある人。Chart.jsに興味がある人
 ## 使用技術
