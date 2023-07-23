@@ -1,4 +1,4 @@
-import{a}from"./Content-cd17dac9.js";import{a as e,c as s}from"./index-c6a12b0a.js";const n=`
+import{a}from"./Content-6e336745.js";import{a as e,c as s}from"./index-ae5e28ca.js";const n=`
 ## 内容
 　GraphQL APIでDBアクセスを大量に発生させる攻撃手法について、公式ドキュメントや参考記事をもとに、実際に攻撃が可能なのか確かめてみたという記事。
 

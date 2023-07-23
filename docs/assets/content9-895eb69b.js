@@ -1,4 +1,4 @@
-import{a as r}from"./Content-cd17dac9.js";import{a as s,c as o}from"./index-c6a12b0a.js";const i=`
+import{a as r}from"./Content-6e336745.js";import{a as s,c as o}from"./index-ae5e28ca.js";const i=`
 ## 想定読者
 　JavaScriptの基本が分かる人。JavaScriptに興味がある人。Slideアプリを自作したい人。Svelteが気になっている人。
 

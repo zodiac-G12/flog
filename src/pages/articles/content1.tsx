@@ -10,12 +10,6 @@ const markdown = `
 いろいろプロジェクトやってて、ここに行き着いた。
 Nuxtを私はあまりにも知らなすぎた。
 LightHouseのスコアがあまりに低かったので、これで少し改善したはず。
-
-<center>
-<a href="https://h.accesstrade.net/sp/cc?rk=0100n6l400kele" rel="nofollow">
-<img src="https://h.accesstrade.net/sp/rr?rk=0100n6l400kele" alt="アクセストレード パートナーサイト募集" border="0" style="max-width: 300px;"/>
-</a>
-</center>
 `;
 
 const Content1: Component<{ isSP: Accessor<boolean> }> = (props) => {

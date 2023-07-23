@@ -2,6 +2,9 @@ import {Accessor} from 'solid-js';
 import type {Component} from 'solid-js';
 import SolidMarkdown from 'solid-markdown';
 import Highlight from 'solid-highlight';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import {css} from 'solid-styled-components';
 import {Img} from '@/components';
 
@@ -52,6 +55,8 @@ export const Content: Component<{
       </div>
       <div class={contentContainer}>
         <SolidMarkdown
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
           children={props.articleContents.markdown}
           components={{
             code(_props) {

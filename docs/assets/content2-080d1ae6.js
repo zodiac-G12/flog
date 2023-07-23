@@ -1,4 +1,4 @@
-import{a as n}from"./Content-cd17dac9.js";import{a as _,c as e}from"./index-c6a12b0a.js";const i=`
+import{a as n}from"./Content-6e336745.js";import{a as _,c as e}from"./index-ae5e28ca.js";const i=`
 ## 天才たちの築いた分野「情報理論」
 
 　ウィーナとシャノンが確立したと言われる分野である。
@@ -26,19 +26,25 @@ import{a as n}from"./Content-cd17dac9.js";import{a as _,c as e}from"./index-c6a1
 
 　確率事象Eが生起したことを知ったとき,
 
-\`$$I(E)=-\\log_2P(E)　[bit]$$\`
+$$
+I(E) = -\\log_2P(E)　[bit]
+$$
 
 の __情報量__ (amount of information) を受け取ったという.
 
 ---
 
-　例えばサイコロの目が偶数であるという事象 \`$E_1$\` は
+　例えばサイコロの目が偶数であるという事象 $E_1$ は
 
-\`$$P(E_1)=\\frac{1}{2}$$\`
+$$
+P(E_1) = \\frac{1}{2}
+$$
 
 よって
 
-\`$$I(E_1)=-\\log_2\\frac{1}{2} = 1　[bit]$$\`
+$$
+I(E_1) = -\\log_2\\frac{1}{2} = 1　[bit]
+$$
 
 これから考えると、確率が増える毎に情報量は減少することがわかる。
 
@@ -46,12 +52,16 @@ import{a as n}from"./Content-cd17dac9.js";import{a as _,c as e}from"./index-c6a1
 
 ---
 
-　離散的情報源 \`$S$\` で,出力シンボルを一つ知らされる毎に,受け取る情報量の期待値を,
-その情報源の __シンボルあたりの平均情報量__ (average amount of information per symbol) あるいは __エントロピー__ (entropy) とよび,
-これを \`$H(S)$\` で表す.
+　離散的情報源 $S$ で, 出力シンボルを一つ知らされる毎に, 受け取る情報量の期待値を,
+
+その情報源の __シンボルあたりの平均情報量__ (average amount of information per symbol) あるいは __エントロピー__ (entropy) とよび, 
+これを $H(S)$ で表す.
+
 　特に記憶のない離散的情報源では,
 
-\`$$H(S)=\\sum_{i=0}^{r}P(s_i)\\log_2\\frac{1}{P(s_i)}　[bit / symbol]$$\`
+$$
+H(S) = \\sum_{i=0}^{r}P(s_i)\\log_2\\frac{1}{P(s_i)}　[bit / symbol]
+$$
 
 である.
 
@@ -62,7 +72,7 @@ import{a as n}from"./Content-cd17dac9.js";import{a as _,c as e}from"./index-c6a1
 断熱的不可逆変化では、系全体のエントロピーは絶対的に増大する。聞いたことあるでしょう。
 
 
-## なんでlogなんだろう
+## なんで"log"なんだろう
 
 　理系ならばここで疑問に思わなくてはいけないことがある。
 何でlogを用いて情報量を定義しているのか。
@@ -78,16 +88,22 @@ import{a as n}from"./Content-cd17dac9.js";import{a as _,c as e}from"./index-c6a1
 
 ### Theorem.
 
-　\`$I$\` を \`$P$\` のみの関数 \`$I(P)$\` とするとき,
+　$I$ を $P$ のみの関数 $I(P)$ とするとき,
 
-- (i) \`$I(P)$\` は \`$P$\` の単調減少連続関数
-- (ii) \`$P_3=P_1・P_2$\` とするとき,
+- (i) $I(P)$ は $P$ の単調減少連続関数
+- (ii) $P_3=P_1・P_2$ とするとき,
 
-\`$$I(P_3)=I(P_1)+I(P_2)$$\`
+$$
+I(P_3)=I(P_1)+I(P_2)
+$$
 
 なる2つの条件を満たす関数は
-\`$$I(P)=-k\\log_2P$$\`
-に限られる.ここで \`$k$\` は正の定数である.
+
+$$
+I(P)=-k\\log_2P
+$$
+
+に限られる.ここで $k$ は正の定数である.
 
 ---
 

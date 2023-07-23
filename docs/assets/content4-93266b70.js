@@ -1,4 +1,4 @@
-import{a as i}from"./Content-cd17dac9.js";import{a as r,c as e}from"./index-c6a12b0a.js";const f=`
+import{a as i}from"./Content-6e336745.js";import{a as r,c as e}from"./index-ae5e28ca.js";const f=`
 ## Rustのコード
 
 \`\`\`rust
@@ -37,7 +37,7 @@ $ cargo run
 　
 ## 追記(こちらの方が個人的に好き)
 
-__fibd__を書き換えてみる
+__fibd__ を書き換えてみる
 
 \`\`\`rust
 fn fibd(n: u32) -> i128 {
