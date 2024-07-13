@@ -1,0 +1,195 @@
+{
+  "_article-DE0PZfXP.js": {
+    "file": "assets/article-DE0PZfXP.js",
+    "name": "article",
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_prism-D25Z1YQW.js",
+      "_articles-D4TxVWIQ.js",
+      "_routes-CjcWwvG_.js"
+    ]
+  },
+  "_articles-BZH6Q2PY.js": {
+    "file": "assets/articles-BZH6Q2PY.js",
+    "name": "articles",
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_articles-D4TxVWIQ.js",
+      "_routes-CjcWwvG_.js",
+      "_notfound-FwzvHh-x.js"
+    ]
+  },
+  "_articles-D4TxVWIQ.js": {
+    "file": "assets/articles-D4TxVWIQ.js",
+    "name": "articles",
+    "assets": [
+      "assets/nuxt-BoX3Qszt.jpeg",
+      "assets/rust-wide-DHd2Caji.jpg",
+      "assets/webp-De25jKXI.png",
+      "assets/git-wide-CfAGmbjQ.png",
+      "assets/react-wide-Bldgd0BI.png",
+      "assets/svelte-wide-Bv5f0Dtg.png",
+      "assets/graphgl-wide-D9t44XIC.png",
+      "assets/huffman-BStt8w7B.png",
+      "assets/how-to-live-ChNzhcyS.png"
+    ]
+  },
+  "_notfound-FwzvHh-x.js": {
+    "file": "assets/notfound-FwzvHh-x.js",
+    "name": "notfound",
+    "imports": [
+      "_routing-BNXdxvEY.js"
+    ],
+    "assets": [
+      "assets/notfound-Btvcus_u.jpg"
+    ]
+  },
+  "_prism-D25Z1YQW.js": {
+    "file": "assets/prism-D25Z1YQW.js",
+    "name": "prism"
+  },
+  "_routes-CjcWwvG_.js": {
+    "file": "assets/routes-CjcWwvG_.js",
+    "name": "routes",
+    "imports": [
+      "_routing-BNXdxvEY.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx",
+      "src/routes/articles/[id].tsx",
+      "src/routes/[...404].tsx"
+    ]
+  },
+  "_routing-BNXdxvEY.js": {
+    "file": "assets/routing-BNXdxvEY.js",
+    "name": "routing"
+  },
+  "src/assets/git-wide.png": {
+    "file": "assets/git-wide-CfAGmbjQ.png",
+    "src": "src/assets/git-wide.png"
+  },
+  "src/assets/graphgl-wide.png": {
+    "file": "assets/graphgl-wide-D9t44XIC.png",
+    "src": "src/assets/graphgl-wide.png"
+  },
+  "src/assets/how-to-live.png": {
+    "file": "assets/how-to-live-ChNzhcyS.png",
+    "src": "src/assets/how-to-live.png"
+  },
+  "src/assets/huffman.png": {
+    "file": "assets/huffman-BStt8w7B.png",
+    "src": "src/assets/huffman.png"
+  },
+  "src/assets/notfound.jpg": {
+    "file": "assets/notfound-Btvcus_u.jpg",
+    "src": "src/assets/notfound.jpg"
+  },
+  "src/assets/nuxt.jpeg": {
+    "file": "assets/nuxt-BoX3Qszt.jpeg",
+    "src": "src/assets/nuxt.jpeg"
+  },
+  "src/assets/react-wide.png": {
+    "file": "assets/react-wide-Bldgd0BI.png",
+    "src": "src/assets/react-wide.png"
+  },
+  "src/assets/rust-wide.jpg": {
+    "file": "assets/rust-wide-DHd2Caji.jpg",
+    "src": "src/assets/rust-wide.jpg"
+  },
+  "src/assets/svelte-wide.png": {
+    "file": "assets/svelte-wide-Bv5f0Dtg.png",
+    "src": "src/assets/svelte-wide.png"
+  },
+  "src/assets/webp.png": {
+    "file": "assets/webp-De25jKXI.png",
+    "src": "src/assets/webp.png"
+  },
+  "src/routes/[...404].tsx": {
+    "file": "assets/_...404_-Bqafyv0R.js",
+    "name": "_...404_",
+    "src": "src/routes/[...404].tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_notfound-FwzvHh-x.js"
+    ]
+  },
+  "src/routes/[...404].tsx?pick=default&pick=$css": {
+    "file": "assets/_...404_-4zr8MRFY.js",
+    "name": "_...404_",
+    "src": "src/routes/[...404].tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_notfound-FwzvHh-x.js"
+    ]
+  },
+  "src/routes/articles/[id].tsx": {
+    "file": "assets/_id_-d0TalwYm.js",
+    "name": "_id_",
+    "src": "src/routes/articles/[id].tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_article-DE0PZfXP.js",
+      "_routes-CjcWwvG_.js",
+      "_notfound-FwzvHh-x.js",
+      "_articles-D4TxVWIQ.js",
+      "_prism-D25Z1YQW.js"
+    ]
+  },
+  "src/routes/articles/[id].tsx?pick=default&pick=$css": {
+    "file": "assets/_id_-Bo1MmbRf.js",
+    "name": "_id_",
+    "src": "src/routes/articles/[id].tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_article-DE0PZfXP.js",
+      "_routes-CjcWwvG_.js",
+      "_notfound-FwzvHh-x.js",
+      "_articles-D4TxVWIQ.js",
+      "_prism-D25Z1YQW.js"
+    ]
+  },
+  "src/routes/index.tsx": {
+    "file": "assets/index-CQb5ssUU.js",
+    "name": "index",
+    "src": "src/routes/index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_articles-BZH6Q2PY.js",
+      "_articles-D4TxVWIQ.js",
+      "_routes-CjcWwvG_.js",
+      "_notfound-FwzvHh-x.js"
+    ]
+  },
+  "src/routes/index.tsx?pick=default&pick=$css": {
+    "file": "assets/index-DRLQBorQ.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_articles-BZH6Q2PY.js",
+      "_articles-D4TxVWIQ.js",
+      "_routes-CjcWwvG_.js",
+      "_notfound-FwzvHh-x.js"
+    ]
+  },
+  "virtual:$vinxi/handler/client": {
+    "file": "assets/client-CIO0JvXG.js",
+    "name": "client",
+    "src": "virtual:$vinxi/handler/client",
+    "isEntry": true,
+    "imports": [
+      "_routing-BNXdxvEY.js",
+      "_routes-CjcWwvG_.js",
+      "_prism-D25Z1YQW.js"
+    ],
+    "css": [
+      "assets/client-BA4QC-xZ.css"
+    ]
+  }
+}
