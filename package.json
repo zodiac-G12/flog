@@ -1,61 +1,47 @@
 {
-  "name": "FLOG",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "/flog/",
+  "name": "flog - blog",
+  "version": "1.0.0",
+  "type": "module",
   "engines": {
-    "pnpm": "8.6.x",
-    "node": "20.x"
+    "pnpm": "9.5.x",
+    "npm": ">=10.7.0",
+    "node": ">=18.20.x"
   },
   "scripts": {
-    "start": "vite",
-    "prepare": "husky install",
-    "dev": "vite",
-    "build": "export GITHUB_PAGES=true && vite build",
-    "build:local": "vite build",
-    "serve": "vite preview",
-    "test": "vitest",
-    "testrun": "vitest run",
+    "prepare": "husky",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "serve": "serve .output/public",
     "lint-staged": "lint-staged",
-    "format": "prettier-eslint --write \"**/*.{js,json,md,yml,ts,tsx,jsx,css,scss}\""
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-autofix": "^1.1.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-unused-imports": "^3.0.0",
-    "highlight.js": "^11.8.0",
-    "husky": "^8.0.3",
-    "jsdom": "^22.1.0",
-    "lint-staged": "^13.2.3",
-    "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^7.1.0",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.2",
-    "vite-plugin-solid": "^2.7.0",
-    "vitest": "^0.33.0"
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src"
   },
   "dependencies": {
-    "@solidjs/router": "^0.8.2",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "eslint": "^8.44.0",
-    "eslint-plugin-solid": "^0.12.1",
-    "i18next": "^23.2.8",
-    "rehype-katex": "^6.0.3",
-    "rehype-raw": "^6.1.1",
-    "remark-math": "^5.1.1",
-    "solid-app-router": "^0.4.2",
-    "solid-highlight": "^0.1.12",
-    "solid-js": "^1.7.7",
-    "solid-markdown": "^1.2.2",
-    "solid-styled-components": "^0.28.5"
+    "@solidjs/router": "^0.14.1",
+    "@solidjs/start": "^1.0.4",
+    "autoprefixer": "^10.4.19",
+    "date-fns": "^3.6.0",
+    "i18next": "^23.11.5",
+    "postcss": "^8.4.39",
+    "prismjs": "^1.29.0",
+    "rehype-katex": "^7.0.0",
+    "rehype-raw": "^7.0.0",
+    "remark-math": "^6.0.0",
+    "solid-highlight": "^0.1.26",
+    "solid-js": "^1.8.18",
+    "solid-markdown": "^2.0.13",
+    "tailwindcss": "^3.4.4",
+    "vinxi": "^0.3.14"
   },
   "lint-staged": {
-    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": "pnpm format"
+    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": ["pnpm format", "pnpm lint"]
   },
-  "moduleNameMapper": {
-    "^@/(.*)$": "<rootDir>/../src/$1"
+  "devDependencies": {
+    "@types/prismjs": "^1.26.4",
+    "@biomejs/biome": "1.8.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "serve": "^14.2.3"
   }
 }
