@@ -1,49 +1,39 @@
-import {lazy, createEffect, createSignal, For, Accessor} from 'solid-js';
-import type {Component} from 'solid-js';
-import {Router, Routes, Route, hashIntegration} from '@solidjs/router';
-import {articles, Article} from './articles';
+import { Router } from "@solidjs/router";
+import { Suspense } from "solid-js";
+import { Crown } from "~/components/unions";
+import { ROUTES } from "~/constants";
+import "prismjs";
+import "prismjs/themes/prism-twilight.min.css";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-rust";
+import "prismjs/components/prism-ruby";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-graphql";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-markdown";
+import "prismjs/components/prism-latex";
+import "prismjs/components/prism-jsx";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "./app.css";
 
-const spMaxWidth = 450;
-const homeFileName = 'home';
-const Home = lazy(() => import(`./pages/${homeFileName}.tsx`));
-
-const createArticle: Component<{
-  article: Article;
-  isSP: Accessor<boolean>;
-}> = (props) => {
-  const {article, isSP} = props;
-
-  const Content = lazy(() => import(`./pages/articles/${article.path}.tsx`));
-
+export default function App() {
   return (
-    <Route
-      path={`/articles/${article.path}`}
-      element={<Content isSP={isSP} />}
-    />
-  );
-};
-
-const App: Component = () => {
-  const [isSP, setIsSP] = createSignal(false);
-
-  createEffect(() => {
-    const currentWidth = window.innerWidth;
-
-    const isSP = spMaxWidth > currentWidth ? true : false;
-
-    setIsSP(isSP);
-  });
-
-  return (
-    <Router source={hashIntegration()}>
-      <Routes>
-        <Route path="/" element={<Home isSP={isSP} />} />
-        <For each={articles}>
-          {(article) => createArticle({article, isSP})}
-        </For>
-      </Routes>
+    <Router
+      base={import.meta.env.SERVER_BASE_URL ?? "/"}
+      root={(props) => (
+        <>
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+            integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
+            crossorigin="anonymous"
+          />
+          <Crown />
+          <Suspense>{props.children}</Suspense>
+        </>
+      )}
+    >
+      {ROUTES}
     </Router>
   );
-};
-
-export default App;
+}
