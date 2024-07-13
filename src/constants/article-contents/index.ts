@@ -10,6 +10,6 @@ export * from "./reactChart";
 export * from "./rmoWithRust";
 export * from "./rustAdder";
 export * from "./rustFibonacci";
-export * from "./sveltTodo";
+export * from "./svelteTodo";
 export * from "./svelteMarked";
 export * from "./webpTransformer";

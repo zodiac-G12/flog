@@ -1,4 +1,4 @@
-export const sveltTodo = `
+export const svelteTodo = `
   ## 経緯
 　去年からReactでずっと作っていたTODOアプリがあって、
 途中で飽きたので、そのまま似たような機能のものをSvelteで実装した。

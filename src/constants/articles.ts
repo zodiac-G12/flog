@@ -8,7 +8,7 @@ import {
   lightsOut,
   logicCollapse,
   svelteMarked,
-  sveltTodo,
+  svelteTodo,
   graphqlDefense,
   graphqlHowToAttack,
   rmoWithRust,
@@ -18,7 +18,7 @@ import {
 import NuxtImg from "~/assets/nuxt.jpeg";
 import RustImg from "~/assets/rust-wide.jpg";
 import WebpImg from "~/assets/webp.png";
-import GitImg from "~/assets/git.png";
+import GitImg from "~/assets/git-wide.png";
 import ReactImg from "~/assets/react-wide.png";
 import SvelteImg from "~/assets/svelte-wide.png";
 import GraphQLImg from "~/assets/graphgl-wide.png";
@@ -136,6 +136,6 @@ export const ARTICLES: {
     img: SvelteImg,
     date: new Date("2021/3/29"),
     id: "svelte-todo",
-    markdown: sveltTodo,
+    markdown: svelteTodo,
   },
 ];
