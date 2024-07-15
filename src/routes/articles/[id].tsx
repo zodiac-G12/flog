@@ -25,7 +25,7 @@ export default function Content() {
         {article()?.title}
       </h1>
       <div class="flex justify-between items-center px-10 lg:px-16 pb-1 bg-gray-100">
-        <A class="text-lg text-blue-700" href="/">
+        <A class="text-sm lg:text-lg text-blue-700 underline" href="/">
           記事一覧へ ↩
         </A>
         <p class="text-sm text-gray-600">

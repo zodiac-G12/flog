@@ -42,27 +42,64 @@ hr {
 
 .katex {
   font-family: "Ten Mincho", serif;
+  overflow-y: hidden;
+  overflow-x: scroll hidden;
 }
 
 @media (orientation: landscape) {
   h2 {
+    font-weight: bold;
     font-size: 2rem;
     /* border-bottom: 4px solid #274151; */
     /* padding-bottom: 4px; */
     padding: 3rem 0 2rem 0;
     line-height: 2.2rem;
   }
+
+  li{
+    position: relative;
+    padding-left: 0.7rem;
+  }
+
+  li:before {
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    left: 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    background-color: #000000;
+    border-radius: 9999px;
+  }
 }
 
 @media (orientation: portrait) {
   h2 {
-    font-size: 1.3rem;
+    font-weight: bold;
+    font-size: 1.1rem;
     /* border-bottom: 4px solid #274151; */
     /* padding-bottom: 4px; */
     padding: 2rem 0 1.3rem 0;
     line-height: 1.3rem;
   }
+
+  li{
+    position: relative;
+    padding-left: 0.6rem;
+  }
+
+  li:before {
+    content: "";
+    position: absolute;
+    top: 0.45rem;
+    left: 0;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: black;
+    border-radius: 9999px;
+  }
 }
+
 
 blockquote {
   margin: 10px 0;
