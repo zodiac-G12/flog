@@ -1,26 +1,45 @@
 {
-  "_article-DrMcrVPx.js": {
-    "file": "assets/article-DrMcrVPx.js",
+  "_app-!~{006}~.js": {
+    "file": "assets/app-D_tu6PPD.css",
+    "src": "_app-!~{006}~.js"
+  },
+  "_app-DeBYcT-H.js": {
+    "file": "assets/app-DeBYcT-H.js",
+    "name": "app",
+    "imports": [
+      "_routing-BBaV_6Yn.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx",
+      "src/routes/articles/[id].tsx",
+      "src/routes/[...404].tsx"
+    ],
+    "css": [
+      "assets/app-D_tu6PPD.css"
+    ]
+  },
+  "_article-CQpJXY00.js": {
+    "file": "assets/article-CQpJXY00.js",
     "name": "article",
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_prism-D25Z1YQW.js",
-      "_articles-LQIt2NJF.js",
-      "_routes-T6yfiZgV.js"
+      "_routing-BBaV_6Yn.js",
+      "_notfound-BBuKu5C9.js",
+      "_app-DeBYcT-H.js",
+      "_articles-BLMSBe2u.js"
     ]
   },
-  "_articles-CTV8NGNB.js": {
-    "file": "assets/articles-CTV8NGNB.js",
-    "name": "articles",
+  "_article-DYwY_HGz.js": {
+    "file": "assets/article-DYwY_HGz.js",
+    "name": "article",
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_articles-LQIt2NJF.js",
-      "_routes-T6yfiZgV.js",
-      "_notfound-D_HAk1tB.js"
+      "_routing-BBaV_6Yn.js",
+      "_articles-BLMSBe2u.js",
+      "_app-DeBYcT-H.js",
+      "_notfound-BBuKu5C9.js"
     ]
   },
-  "_articles-LQIt2NJF.js": {
-    "file": "assets/articles-LQIt2NJF.js",
+  "_articles-BLMSBe2u.js": {
+    "file": "assets/articles-BLMSBe2u.js",
     "name": "articles",
     "assets": [
       "assets/nuxt-BoX3Qszt.jpeg",
@@ -34,34 +53,18 @@
       "assets/how-to-live-ChNzhcyS.png"
     ]
   },
-  "_notfound-D_HAk1tB.js": {
-    "file": "assets/notfound-D_HAk1tB.js",
+  "_notfound-BBuKu5C9.js": {
+    "file": "assets/notfound-BBuKu5C9.js",
     "name": "notfound",
     "imports": [
-      "_routing-BNXdxvEY.js"
+      "_routing-BBaV_6Yn.js"
     ],
     "assets": [
       "assets/notfound-Btvcus_u.jpg"
     ]
   },
-  "_prism-D25Z1YQW.js": {
-    "file": "assets/prism-D25Z1YQW.js",
-    "name": "prism"
-  },
-  "_routes-T6yfiZgV.js": {
-    "file": "assets/routes-T6yfiZgV.js",
-    "name": "routes",
-    "imports": [
-      "_routing-BNXdxvEY.js"
-    ],
-    "dynamicImports": [
-      "src/routes/index.tsx",
-      "src/routes/articles/[id].tsx",
-      "src/routes/[...404].tsx"
-    ]
-  },
-  "_routing-BNXdxvEY.js": {
-    "file": "assets/routing-BNXdxvEY.js",
+  "_routing-BBaV_6Yn.js": {
+    "file": "assets/routing-BBaV_6Yn.js",
     "name": "routing"
   },
   "src/assets/git-wide.png": {
@@ -105,91 +108,85 @@
     "src": "src/assets/webp.png"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-rnZfL3w2.js",
+    "file": "assets/_...404_-C6YIaU-G.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_notfound-D_HAk1tB.js"
+      "_routing-BBaV_6Yn.js",
+      "_notfound-BBuKu5C9.js"
     ]
   },
   "src/routes/[...404].tsx?pick=default&pick=$css": {
-    "file": "assets/_...404_-C4--BdTr.js",
+    "file": "assets/_...404_-B1pTFYlP.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css",
     "isEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_notfound-D_HAk1tB.js"
+      "_routing-BBaV_6Yn.js",
+      "_notfound-BBuKu5C9.js"
     ]
   },
   "src/routes/articles/[id].tsx": {
-    "file": "assets/_id_-Br31ow0i.js",
+    "file": "assets/_id_-PZ6Xryv-.js",
     "name": "_id_",
     "src": "src/routes/articles/[id].tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_article-DrMcrVPx.js",
-      "_routes-T6yfiZgV.js",
-      "_notfound-D_HAk1tB.js",
-      "_articles-LQIt2NJF.js",
-      "_prism-D25Z1YQW.js"
+      "_routing-BBaV_6Yn.js",
+      "_article-CQpJXY00.js",
+      "_app-DeBYcT-H.js",
+      "_notfound-BBuKu5C9.js",
+      "_articles-BLMSBe2u.js"
     ]
   },
   "src/routes/articles/[id].tsx?pick=default&pick=$css": {
-    "file": "assets/_id_-CWrHRLFj.js",
+    "file": "assets/_id_-DoR39vmp.js",
     "name": "_id_",
     "src": "src/routes/articles/[id].tsx?pick=default&pick=$css",
     "isEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_article-DrMcrVPx.js",
-      "_routes-T6yfiZgV.js",
-      "_notfound-D_HAk1tB.js",
-      "_articles-LQIt2NJF.js",
-      "_prism-D25Z1YQW.js"
+      "_routing-BBaV_6Yn.js",
+      "_article-CQpJXY00.js",
+      "_app-DeBYcT-H.js",
+      "_notfound-BBuKu5C9.js",
+      "_articles-BLMSBe2u.js"
     ]
   },
   "src/routes/index.tsx": {
-    "file": "assets/index-CQEDnYcq.js",
+    "file": "assets/index-BEf6Qtu7.js",
     "name": "index",
     "src": "src/routes/index.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_articles-CTV8NGNB.js",
-      "_articles-LQIt2NJF.js",
-      "_routes-T6yfiZgV.js",
-      "_notfound-D_HAk1tB.js"
+      "_routing-BBaV_6Yn.js",
+      "_article-DYwY_HGz.js",
+      "_articles-BLMSBe2u.js",
+      "_app-DeBYcT-H.js",
+      "_notfound-BBuKu5C9.js"
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-bMkf2p6W.js",
+    "file": "assets/index-CLbPiI71.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_articles-CTV8NGNB.js",
-      "_articles-LQIt2NJF.js",
-      "_routes-T6yfiZgV.js",
-      "_notfound-D_HAk1tB.js"
+      "_routing-BBaV_6Yn.js",
+      "_article-DYwY_HGz.js",
+      "_articles-BLMSBe2u.js",
+      "_app-DeBYcT-H.js",
+      "_notfound-BBuKu5C9.js"
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-Bylxjg3Y.js",
+    "file": "assets/client-DbWcBOTd.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_routing-BNXdxvEY.js",
-      "_routes-T6yfiZgV.js",
-      "_prism-D25Z1YQW.js"
-    ],
-    "css": [
-      "assets/client-y3OKq6d5.css"
+      "_routing-BBaV_6Yn.js",
+      "_app-DeBYcT-H.js"
     ]
   }
 }
