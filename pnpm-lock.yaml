@@ -41,6 +41,9 @@ importers:
       solid-highlight:
         specifier: ^0.1.26
         version: 0.1.26(prismjs@1.29.0)(solid-js@1.8.18)
+      solid-infinite-scroll:
+        specifier: ^1.0.1
+        version: 1.0.1
       solid-js:
         specifier: ^1.8.18
         version: 1.8.18
@@ -2888,6 +2891,9 @@ packages:
     peerDependencies:
       prismjs: ^1.29.0
       solid-js: ^1.8.0
+
+  solid-infinite-scroll@1.0.1:
+    resolution: {integrity: sha512-yIDyr61316jyHSxuQqidMUTcauKDQyPIzIAKawTrTadqxij2wOcM3ei6/MR6WPBCcR0ZMJ8E0aQInFSnL9w2Hg==}
 
   solid-js@1.8.18:
     resolution: {integrity: sha512-cpkxDPvO/AuKBugVv6xKFd1C9VC0XZMu4VtF56IlHoux8HgyW44uqNSWbozMnVcpIzHIhS3vVXPAVZYM26jpWw==}
@@ -6587,6 +6593,10 @@ snapshots:
   solid-highlight@0.1.26(prismjs@1.29.0)(solid-js@1.8.18):
     dependencies:
       prismjs: 1.29.0
+      solid-js: 1.8.18
+
+  solid-infinite-scroll@1.0.1:
+    dependencies:
       solid-js: 1.8.18
 
   solid-js@1.8.18:

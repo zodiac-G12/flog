@@ -1,0 +1,14 @@
+import "prismjs";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/plugins/line-numbers/prism-line-numbers.min.css";
+import "prismjs/themes/prism-okaidia.min.css";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-rust";
+import "prismjs/components/prism-ruby";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-graphql";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-markdown";
+import "prismjs/components/prism-latex";
+import "prismjs/components/prism-jsx";
+import "~/app.css";
