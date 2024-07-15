@@ -108,7 +108,7 @@
     "src": "src/assets/webp.png"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-C6YIaU-G.js",
+    "file": "assets/_...404_-B1pTFYlP.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx",
     "isDynamicEntry": true,
@@ -118,7 +118,7 @@
     ]
   },
   "src/routes/[...404].tsx?pick=default&pick=$css": {
-    "file": "assets/_...404_-B1pTFYlP.js",
+    "file": "assets/_...404_-C6YIaU-G.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css",
     "isEntry": true,
