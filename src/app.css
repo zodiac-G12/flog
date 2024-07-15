@@ -59,6 +59,7 @@ hr {
   li{
     position: relative;
     padding-left: 0.7rem;
+    overflow-wrap: break-word;
   }
 
   li:before {
@@ -86,6 +87,7 @@ hr {
   li{
     position: relative;
     padding-left: 0.6rem;
+    overflow-wrap: break-word;
   }
 
   li:before {

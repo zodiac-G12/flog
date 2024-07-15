@@ -29,6 +29,7 @@
     "rehype-raw": "^7.0.0",
     "remark-math": "^6.0.0",
     "solid-highlight": "^0.1.26",
+    "solid-infinite-scroll": "^1.0.1",
     "solid-js": "^1.8.18",
     "solid-markdown": "^2.0.13",
     "tailwindcss": "^3.4.4",
@@ -38,8 +39,8 @@
     "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": ["pnpm format", "pnpm lint"]
   },
   "devDependencies": {
-    "@types/prismjs": "^1.26.4",
     "@biomejs/biome": "1.8.3",
+    "@types/prismjs": "^1.26.4",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "serve": "^14.2.3"
