@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       // gotham: ['Gotham', 'Gotham Bold']
-      helventica: ['Helvetica Nune'],
+      helventica: ['Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif'],
     },
     extend: {}
   },

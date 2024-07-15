@@ -5,7 +5,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 
 // biome-ignore lint: suspicious/noExplicitAny
-const setCode = (_props: any): any => {
+const HighlightComponent = (_props: any): any => {
   const { children, class: _class, node, ...props } = _props;
 
   const match = /language-(\w+)/.exec(_class);
@@ -17,7 +17,11 @@ const setCode = (_props: any): any => {
   );
 
   return (
-    <Highlight {...props} language={language} class="line-numbers">
+    <Highlight
+      {...props}
+      language={language}
+      class="line-numbers overflow-x-scroll"
+    >
       {content}
     </Highlight>
   );
@@ -25,7 +29,7 @@ const setCode = (_props: any): any => {
 
 export const ArticleContent = (props: { markdown: string }) => {
   return (
-    <div class="pt-2 pb-28 px-10 lg:px-16 bg-gray-100 text-gray-700 text-lg">
+    <div class="pt-2 pb-28 px-10 lg:px-16 bg-gray-100 text-gray-700 text-sm lg:text-lg">
       <SolidMarkdown
         renderingStrategy="reconcile"
         remarkPlugins={[remarkMath]}
@@ -33,7 +37,7 @@ export const ArticleContent = (props: { markdown: string }) => {
         rehypePlugins={[rehypeKatex, rehypeRaw] as any}
         components={{
           code(props) {
-            return setCode(props);
+            return <HighlightComponent {...props} />;
           },
         }}
       >
