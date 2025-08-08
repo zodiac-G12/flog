@@ -18,7 +18,6 @@
     "lint": "biome lint ./src"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.1",
     "@solidjs/start": "^1.0.4",
     "autoprefixer": "^10.4.19",
@@ -37,10 +36,7 @@
     "vinxi": "^0.3.14"
   },
   "lint-staged": {
-    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": [
-      "pnpm format",
-      "pnpm lint"
-    ]
+    "*.{js,json,md,yml,ts,tsx,jsx,css,scss}": ["pnpm format", "pnpm lint"]
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
